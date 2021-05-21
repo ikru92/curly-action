@@ -11,9 +11,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: whatsup
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'dude'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.whatsup.outputs.time }}"

@@ -2,4 +2,4 @@
 
 echo "What's up $1"
 time=$(date)
-echo "time::$time"
+echo "::set-output name=time::$time"
