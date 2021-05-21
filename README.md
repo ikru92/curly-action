@@ -1,21 +1,21 @@
-# Hello world docker action
+# Curly-action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action calls a rest endpoint and passes the value to the next action.
 
 ## Inputs
 
-### `who-to-greet`
+### `api`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The api to call. Default `"https://dummyapi.io/data/api/user?limit=10"`.
 
 ## Outputs
 
-### `time`
+### `response`
 
-The time we greeted you.
+Api response.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: ikru92/Curly-action
 with:
-  who-to-greet: 'Mona the Octocat'
+  url: 'https://dummyapi.io/data/api/user?limit=5'
