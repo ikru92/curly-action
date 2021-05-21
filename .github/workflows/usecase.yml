@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Curling Json
+    steps:
+      - name: Get Json
+        uses: ikru92/curly-action@main
+        id: curl
+        with:
+          api: 'https://reqbin.com/echo/get/json'
+      - name: Output Json
+        run: echo "JsonResponse= ${{ steps.curl.outputs.response }}"
