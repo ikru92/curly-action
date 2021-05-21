@@ -15,7 +15,8 @@ This action calls a rest endpoint and passes the value to the next action.
 Api response.
 
 ## Example usage
-
-uses: ikru92/Curly-action
-with:
+```yaml
+uses: ikru92/Curly-action@main  
+with:  
   url: 'https://dummyapi.io/data/api/user?limit=5'
+```
