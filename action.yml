@@ -1,9 +1,9 @@
 # action.yml
 name: 'Curly'
-description: 'Url to curl'
+description: 'Calling a rest api and out Json'
 inputs:
-  url:  # id of input
-    description: 'url'
+  api:  # id of input
+    description: 'api to call'
     required: true
     default: 'https://www.google.com'
 outputs:
@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.url }}
+    - ${{ inputs.api }}

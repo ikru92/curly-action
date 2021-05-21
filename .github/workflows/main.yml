@@ -13,7 +13,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: curl
         with:
-          url: 'https://reqbin.com/echo/get/json'
+          api: 'https://reqbin.com/echo/get/json'
       # Use the output from the `hello` step
       - name: Output Json
         run: echo "JsonResponse= ${{ steps.curl.outputs.response }}"
