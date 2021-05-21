@@ -1,13 +1,13 @@
 # action.yml
-name: 'Curly'
-description: 'Calling a rest api and out Json'
+name: 'Curly-action'
+description: 'Calls a rest api and returns output to the next step'
 inputs:
   api:  # id of input
     description: 'api to call'
     required: true
-    default: 'https://www.google.com'
+    default: 'https://dummyapi.io/data/api/user?limit=10'
 outputs:
-  response: # id of output
+  response:
     description: 'Json response'
 runs:
   using: 'docker'
