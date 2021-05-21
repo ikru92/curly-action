@@ -1,16 +1,16 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Curly'
+description: 'Url to curl'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  url:  # id of input
+    description: 'url'
     required: true
-    default: 'World'
+    default: 'https://www.google.com'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  response: # id of output
+    description: 'Json response'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.url }}
