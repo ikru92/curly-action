@@ -1,3 +1,3 @@
 #!/bin/sh -l
 response=$(curl $1)
-echo "name=$response" >> $GITHUB_OUTPUT"
+echo "response=$response" >> $GITHUB_OUTPUT
