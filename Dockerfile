@@ -1,9 +1,8 @@
 # Container image that runs your code
 FROM alpine:3.10
 WORKDIR /action
-# Copies your code file from your action repository to the filesystem path `/` of the container
 RUN apk add --no-cache curl
-COPY entrypoint.sh /action/entrypoint.sh
-RUN chmod +x /action/entrypoint.sh
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
+# Copies your code file from the action repository to the filesystem working directory
+COPY entrypoint.sh ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["/action/entrypoint.sh"]
