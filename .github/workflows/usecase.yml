@@ -9,6 +9,6 @@ jobs:
         uses: ikru92/curly-action@main
         id: curl
         with:
-          api: 'https://dummyapi.io/data/api/user?limit=5'
+          api: 'https://dummyapi.io/data/v1/user?limit=10'
       - name: Print response
-        run: echo "JsonResponse= ${{ steps.curl.outputs.response }}"
+        run: echo "${{ steps.curl.outputs.response }}"
